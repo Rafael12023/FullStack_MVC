@@ -4,6 +4,7 @@ Este repositório contém a segunda parte do nosso projeto Full Stack desenvolvi
 
 ## 🚀 Objetivo do Projeto
 
+- API base implementada em Node.js, Python, Java ou C# (qualquer tecnologia que dominem).
 - Endpoints minimos:
     - /auth/login (Implementacao de autenticacao segura)
     - /logs (Demonstracao do sistema de log)
