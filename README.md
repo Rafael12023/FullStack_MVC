@@ -57,7 +57,7 @@ Copie o conteúdo do arquivo `.env.example` e cole em um novo arquivo chamado `.
 
 ```
 DB_HOST=localhost
-DB_NAME=seu_banco
+DB_NAME=mvc_fullstack
 DB_USER=root
 DB_PASS=sua_senha
 ```
