@@ -1,3 +1,1 @@
-[2025-04-22 05:03:28] [ERRO] Tentativa de login com usuário ou senha inválidos - Usuário: Não identificado
-[2025-04-22 05:03:44] [SUCESSO] Login realizado com sucesso - Usuário: larissa
-[2025-04-22 00:05:40] [SUCESSO] Login realizado com sucesso - Usuário: larissa
+
