@@ -49,6 +49,19 @@ composer install
 
 Esse comando irá instalar automaticamente todas as bibliotecas necessárias descritas no `composer.json`, como o `vlucas/phpdotenv` para gerenciamento de variáveis de ambiente.
 
+
+### 🔽 3. Instalação
+
+1. Faça o download do projeto.
+2. Extraia **todos os arquivos** do projeto diretamente para o **diretório raiz** do servidor web (Apache ou Nginx).  
+   - Exemplos:
+     - Apache (Linux): `/var/www/html/`
+     - XAMPP (Windows): `C:\xampp\htdocs\`
+3. Acesse o sistema pelo navegador através do endereço configurado (ex: `http://localhost/`).
+
+⚠️ **Importante:** O sistema **só funcionará corretamente** se os arquivos forem extraídos diretamente na raiz do servidor web.
+
+
 ### ⚙️ 3. Configure o ambiente e o banco de dados
 
 #### 🔧 Crie o arquivo `.env` na raiz do projeto
