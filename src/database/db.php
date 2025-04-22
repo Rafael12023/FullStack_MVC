@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../../vendor/autoload.php'; // Corrigido o caminho
-
+require_once __DIR__ . '/../logs/logger.php';
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../../'); // Carrega o .env da raiz
@@ -15,7 +15,7 @@ try {
     // Tentando conectar ao banco de dados
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+    registrarLogTxt('SUCESSO', 'Conexao com o banco bem sucedida');
     // Se a conexão for bem-sucedida, exibe esta mensagem
     //echo json_encode(['status' => 'success', 'message' => 'Conexao bem-sucedida com o banco de dados!']);
     
