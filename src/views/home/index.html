@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=logout" />
 </head>
+
 <body>
-    <p>TESTE... 1..2.. TESTE.. 1..2... TESTANDO.</p>
+    <main>
+        <header>
+            <h1 class="navbar-title">Camada MVC</h1>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/src/views/home">Homepage</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+            <div class="logout-button" onclick="window.location.href = '/src/views/login'">
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+            </div>
+        </header>
+        <section class="container">
+            <div class="sub-container">
+                <h2>Estrutura de pastas</h2>
+                <div class="data-structure" style="font-family: monospace; line-height: 1.5;">
+                    <div>📁 <strong>.git</strong></div>
+                    <div>📁 <strong>src</strong></div>
+                    <div style="margin-left: 20px;">
+                        <div>📁 controllers</div>
+                        <div>📁 database</div>
+                        <div>📁 logs</div>
+                        <div>📁 models</div>
+                        <div>📁 repositories</div>
+                        <div>📁 routes</div>
+                        <div>📁 views</div>
+                    </div>
+                    <div>📁 <strong>vendor</strong></div>
+                    <div style="margin-left: 20px;">
+                        <div>📁 composer</div>
+                        <div>📁 graham-campbell</div>
+                        <div>📁 phpoption</div>
+                        <div>📁 symfony</div>
+                        <div>📁 vlucas</div>
+                        <div>📄 autoload.php</div>
+                    </div>
+                    <div>📄 .env</div>
+                    <div>📄 .env.example</div>
+                    <div>📄 .gitignore</div>
+                    <div>📄 .htaccess</div>
+                    <div>📄 composer.json</div>
+                    <div>📄 composer.lock</div>
+                    <div>📄 index.php</div>
+                    <div>📄 README.md</div>
+                </div>
+                <h2>Implementação</h2>
+                <div class="readme-image">
+                    <img src="./readme_image.png">
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
