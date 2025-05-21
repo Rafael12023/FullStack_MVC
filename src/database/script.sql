@@ -5,3 +5,8 @@ CREATE TABLE usuario (
     usuario VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE log (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL
+);
