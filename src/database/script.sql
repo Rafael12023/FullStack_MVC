@@ -6,7 +6,11 @@ CREATE TABLE usuario (
     senha VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE log (
+CREATE TABLE logs (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    descricao VARCHAR(255) NOT NULL
+    data_hora DATETIME,
+    nivel VARCHAR(20),
+    mensagem TEXT,
+    usuario VARCHAR(100),
+    ip VARCHAR(45)
 );
