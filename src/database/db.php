@@ -15,7 +15,7 @@ try {
     // Tentando conectar ao banco de dados
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    registrarLogTxt('SUCESSO', 'Conexao com o banco bem sucedida');
+    registrarLogBanco('SUCESSO', 'Conexao com o banco bem sucedida');
     // Se a conexão for bem-sucedida, exibe esta mensagem
     //echo json_encode(['status' => 'success', 'message' => 'Conexao bem-sucedida com o banco de dados!']);
     
