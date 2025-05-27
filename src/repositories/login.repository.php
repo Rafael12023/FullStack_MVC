@@ -18,14 +18,14 @@ function verificarCredenciais($username, $password) {
 
         if ($dados) {
             $usuario = new Usuario($dados);
-            registrarLogTxt('SUCESSO', 'Login realizado com sucesso', $username);
+            registrarLogBanco('SUCESSO', 'Login realizado com sucesso', $username);
             return [
                 'success' => true,
                 'message' => 'Login bem-sucedido!',
                 'data' => $usuario->toArray()
             ];
         } else {
-            registrarLogTxt('ERRO', 'Tentativa de login com usuário ou senha inválidos');
+            registrarLogBanco('ERRO', 'Tentativa de login com usuário ou senha inválidos');
             return [
                 'success' => false,
                 'message' => 'Usuário ou senha inválidos.',
@@ -33,7 +33,7 @@ function verificarCredenciais($username, $password) {
             ];
         }
     } catch (PDOException $e) {
-        registrarLogTxt('ERRO', 'Erro ao consultar no BANCO DE DADOS');
+        registrarLogBanco('ERRO', 'Erro ao consultar no BANCO DE DADOS');
         return [
             'success' => false,
             'message' => 'Erro ao consultar o banco de dados.',
