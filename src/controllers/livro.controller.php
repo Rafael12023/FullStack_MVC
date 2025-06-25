@@ -25,7 +25,16 @@ if ($rota === '/livros' && $method === 'GET') {
         ]);
         exit;
     }
-    echo json_encode(criarLivro($db, $dados));
+    if ($dados['ano'] >= 1970) {
+
+        echo json_encode(criarLivro($db, $dados));
+    } else {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Só é permitido livros com publicação a partir de 1970.',
+            'data' => null,
+        ]);
+    }
 } elseif (preg_match('#^/livros/(\d+)$#', $rota, $match)) {
     $id = (int) $match[1];
 
@@ -40,7 +49,18 @@ if ($rota === '/livros' && $method === 'GET') {
             ]);
             exit;
         }
-        echo json_encode(editarLivro($db, $id, $dados));
+
+        if ($dados['ano'] >= 1970) {
+
+            echo json_encode(editarLivro($db, $id, $dados));
+        } else {
+            echo json_encode([
+                'success' => false,
+                'message' => 'Só é permitido livros com publicação a partir de 1970.',
+                'data' => null,
+            ]);
+        }
+        
     } elseif ($method === 'DELETE') {
         echo json_encode(removerLivro($db, $id));
     } else {

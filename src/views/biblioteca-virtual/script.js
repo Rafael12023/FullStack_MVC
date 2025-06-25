@@ -61,6 +61,7 @@ function atualizarLivro(id, titulo, autor, ano) {
   })
     .then((response) => response.json())
     .then((data) => {
+      alert(data.message)
       document.getElementById("form-edicao").style.display = "none";
       carregarLivros();
     });
@@ -81,6 +82,7 @@ document.getElementById("form-livro").addEventListener("submit", function (e) {
   })
     .then((response) => response.json())
     .then((data) => {
+      alert(data.message)
       this.reset();
       carregarLivros();
     });
