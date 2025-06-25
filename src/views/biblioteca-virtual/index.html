@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciar Livros</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1 class="navbar-title">Biblioteca Virtual</h1>
+      <nav>
+        <ul class="navbar">
+          <li><a href="/FullStack_MVC/src/views/home">Homepage</a></li>
+          <li><a href="/FullStack_MVC/src/views/biblioteca-virtual">Biblioteca Virtual</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
+      </nav>
+      <div class="logout-button" onclick="window.location.href = '/FullStack_MVC/src/views/login'">
+        <img src="/FullStack_MVC/src/public/logout.svg">
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="sub-container">
+        <h2>Gerenciar Livros</h2>
+
+        <form id="form-livro">
+          <div>
+            <input type="text" placeholder="Título do livro" name="titulo" required />
+            <input type="text" placeholder="Autor" name="autor" required />
+            <input type="number" placeholder="Ano" name="ano" required />
+          </div>
+          <button type="submit">Adicionar Livro</button>
+        </form>
+
+        <div id="form-edicao" style="display:none; margin-top:2rem;">
+          <div class="form-edicao">
+            <h3>Editar Livro</h3>
+            <form id="editar-livro-form">
+              <input type="hidden" name="id" />
+              <input type="text" name="titulo" placeholder="Novo Título" required />
+              <input type="text" name="autor" placeholder="Novo Autor" required />
+              <input type="number" name="ano" placeholder="Novo Ano" required />
+              <button type="submit">Salvar Alterações</button>
+              <button type="button"
+                onclick="document.getElementById('form-edicao').style.display='none';">Cancelar</button>
+            </form>
+          </div>
+        </div>
+
+        <hr />
+
+        <h3>Lista de Livros</h3>
+        <ul id="lista-livros"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

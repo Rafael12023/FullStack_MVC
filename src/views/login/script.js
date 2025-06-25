@@ -3,7 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
     const formData = new FormData(this); // Pega os dados do formulário
 
-    fetch('/login', {  // Faz a requisição para a rota /login
+    fetch('http://localhost/FullStack_MVC/login', {  // Faz a requisição para a rota /login
         method: 'POST',  // Usando POST para enviar os dados
         body: formData   // Envia os dados do formulário no corpo da requisição
     })
@@ -14,7 +14,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         return response.json(); // Retorna a resposta em JSON
     })
     .then(data => {
-        alert(data.message); // Exibe a mensagem recebida do PHP
         if (data.success) {
             // Aqui você pode redirecionar para outra página ou fazer algo quando o login for bem-sucedido
             window.location.href = '../home'; // Exemplo: redireciona para uma página de "home" após login

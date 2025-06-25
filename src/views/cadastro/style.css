@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cccccca7;
+}
+
+.principal {
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login_texto {
+    text-align: center;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #333;
+    padding: 20px;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+}
+
+.botão_login {
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    width: 70%;
+    margin-left: 15%;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}

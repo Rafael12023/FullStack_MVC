@@ -1,3 +1,4 @@
 <?php
-header("Location: src/views/login/index.html");
+// Inclui o roteador principal para processar todas as rotas
+require_once __DIR__ . '/src/routes/routes.php';
 exit;

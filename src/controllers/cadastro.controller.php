@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/../repositories/login.repository.php'; // Usa o repository de login com hash
+require_once __DIR__ . '/../repositories/cadastro.repository.php'; // Usa o repository de cadastro
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $resultado = verificarLoginComHash($username, $password);
+    $resultado = cadastrarUsuario($username, $password);
 
     echo json_encode($resultado);
 } else {

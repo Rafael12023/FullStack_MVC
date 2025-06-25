@@ -14,3 +14,19 @@ CREATE TABLE logs (
     usuario VARCHAR(100),
     ip VARCHAR(45)
 );
+
+CREATE TABLE Categoria (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Livro (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    ano INT,
+    paginas INT,
+    disponivel BOOLEAN DEFAULT TRUE,
+    categoriaId INT,
+    FOREIGN KEY (categoriaId) REFERENCES Categoria(id)
+);

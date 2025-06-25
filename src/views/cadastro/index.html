@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> login</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,12 +13,12 @@
     <div class="principal">
         <header>
             <div>
-                <h1 class="login_texto">Login</h1>
+                <h1 class="login_texto">Registro</h1>
             </div>
         </header>
 
         <section>
-            <form id="loginForm">
+            <form id="registroForm">
                 <div class="form-group">
                     <input type="text" name="username" id="username" placeholder="Usuário" required>
                 </div>
@@ -27,10 +27,11 @@
                     <input type="password" name="password" id="password" placeholder="Senha" required>
                 </div>
 
-                <div style="display: flex;flex-direction: column;gap: 0.5rem;">
-                    <button class="botão_login" type="submit">Entrar</button>
-                    <button class="botão_login" onclick="window.location.href = '../cadastro'">Cadastrar</button>
+                <div class="form-group">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Senha" required>
                 </div>
+
+                <button class="botão_login" type="submit">Registrar</button>
             </form>
         </section>
     </div>
